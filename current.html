@@ -1,0 +1,544 @@
+<html>
+
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+</head>
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+
+<style>
+*{
+margin:0px;
+padding:0px;
+
+}
+#content1 {
+height:100%;
+background-image: url("logo.jpg");
+background-repeat:no-repeat;
+background-size:  cover;
+position:relative;
+}
+#content2 {
+height:100%;
+background-image: url("Services.jpg");
+background-size:cover;
+background-repeat:no-repeat;
+position:relative;
+}
+
+#content3 {
+height:100%;
+background-image: url("ServicesPage.jpg");
+background-size:cover;
+background-repeat:no-repeat;
+position:relative;
+}
+
+
+
+
+#navbar {
+font-family: 'Raleway', sans-serif;
+height:15%;
+opacity:0.7;
+float:left;
+border-radius:5px;
+position:relative;
+width:100%
+}
+@media all and (max-width: 629px) {
+  /* one column code */
+  #container {
+    display: flex ;
+    align-items: stretch ;
+    flex-flow: column wrap ;
+  }
+  #navbar {
+    order: 1 ;
+    width: 100%;
+  }
+  #content {
+    order: 2 ;
+    width: 100% ;
+  }
+}
+
+ul {
+font-size:24px;
+margin-top:10px;
+list-style-type: none;
+text-align:center;
+}
+li a{
+padding:20px;
+font-size:24px;
+float:left;
+
+
+text-decoration:none;
+color: #999933;
+line-height:200%;
+}
+
+li a.active {
+color:white;
+
+
+}
+
+
+li a:hover:not(.active){
+background-color: #555;
+color:white;
+transition:0.7s;
+border-radius:5px;
+}
+.2{
+opacity:1;
+
+}
+
+.logobox{
+width:50%;
+min-height:42%;
+border-radius:5px;
+position:absolute;
+top:210px;
+text-align:center;
+left:-3%;
+padding:10px;
+}
+
+.logobox2{
+opacity:0.6;
+width:50%;
+min-height:42%;
+border-radius:5px;
+position:absolute;
+top:80px;
+text-align:center;
+left:44%;
+padding:10px;
+}
+.logobox3{
+opacity:1;
+width:50%;
+min-height:42%;
+border-radius:5px;
+position:absolute;
+top:140px;
+text-align:center;
+padding:10px;
+}
+
+
+
+
+h2, p 
+{
+color:#60616c;
+font-family: 'Raleway', sans-serif;
+font-size:15px;
+line-height:23px;
+
+}
+
+h1 {
+font-family: 'Tangerine', cursive;
+font-size:100px;
+color:white;
+word-spacing:15px;
+opacity:0.5;
+}
+.color{
+color: #999933;
+
+}
+h2 {
+font-family: 'Raleway', sans-serif;
+
+font-size:24px;
+}
+
+#head {
+border-radius:5px;
+background-color:#66aa33;
+opacity:0.8;
+padding:5px;
+position:relative;
+top:150px;
+left:40%;
+color: #aaddbb;
+font-size:52px;
+box-shadow: 5px 5px 3px
+}
+.small {
+font-size:12px;
+line-height:10px;
+
+}
+
+.inner {
+padding:10px;
+
+}
+.white {
+color:white;
+font-size:18px;
+}
+
+
+
+
+
+.box {
+padding:5px;
+width: 28.4%;
+height:50%;
+background-color:white;
+margin:10px;
+float:right;
+border-radius:5px;
+font-family: 'Raleway', sans-serif;
+color:#81817e;
+font-size:24px;
+}
+
+.box2 {
+padding:5px;
+width: 28.4%;
+height:50%;
+margin:10px;
+float:right;
+font-family: 'Raleway', sans-serif;
+color:#81817e;
+font-size:24px;
+}
+
+
+
+
+
+
+
+
+.about {
+display:none;
+opacity:0;
+}
+.about.current{
+display:block;
+opacity:1;
+}
+
+.home {
+display:none;
+opacity:0;
+}
+.home.current {
+display:block;
+opacity:1;
+}
+
+.services{
+display:none;
+opacity:0;
+}
+
+.services.current{
+display:block;
+opacity:1;
+
+}
+
+
+
+.size{
+font-size:20px;
+color:white;
+}
+</style>
+<script>
+
+
+$(function() {
+var home = $('.home');
+var current = $('.current');
+var about = $('.about');
+var services = $('.services');
+var speed = 3000;
+ $(".about1").click(function(){
+      if ((home.hasClass('current') || services.hasClass('current')) == true) {
+	    services.animate({opacity:0}).removeClass('current');
+        home.animate({opacity:0}).removeClass('current');
+        about.animate({opacity:1}, 1000).addClass('current');
+                }
+    });
+     $(".Services1").click(function(){
+      if ((home.hasClass('current') || about.hasClass('current')) == true) {
+        home.animate({opacity:0}, 1000).removeClass('current');
+        about.animate({opacity:0}, 1500).removeClass('current');
+		services.animate({opacity:1}, 1500).addClass('current');
+
+                }
+    });
+    
+	
+	
+    $(".home1").click(function(){
+	if ((about.hasClass('current') || services.hasClass('current')) == true) {
+	    services.animate({opacity:0.6}, 1000).removeClass('current')
+        about.animate({opacity:0.6}, 1000).removeClass('current');
+        home.animate({opacity:1}, 1500).addClass('current');
+                   }
+    });
+ });  
+   
+</script>
+<body>
+
+<div class = "home current">     
+<div id = "content1">
+
+<div class = "logobox">
+ <h1> Roses N Gardens </h1>
+ <p class = "small size"> A better pot<br></p>
+ <br>
+ <br>
+ <br>
+<p class = "white"> The best bouqets of flowers to your disposal</p>
+
+</div>
+
+
+<div id = "navbar"> 
+<div class = "inner">
+<ul>
+<nav>
+  <li><a href="#home"  class = "home1" >Home</a></li>
+  <li><a href="#about" class = "about1" >About</a></li>
+   <li><a href="#about" class = "Services1" >Services</a></li>
+
+</nav>
+</ul> 
+<div>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div> 
+</div>
+
+
+</div>
+
+
+
+<div class = "about">
+<div id = "content2">
+
+<div class = "logobox2">
+ <h1 class = "color"> Our          3            Goals </h1>
+ <p class = "small"> A better pot<br></p>
+ <br>
+ <br>
+ <br>
+<div class = "box">
+Quality flowers 
+<br>
+<br>
+<hr>
+<br>
+<p>Our hand picked, home grown collection of beautiful boucettes will 
+dazil and astound the lot of you. We look forward to seeing the pleasant smiles and guarentee satisfaction
+or your money back</p>
+
+
+</div>
+
+<div class = "box">
+Satisfaction
+<br>
+<br>
+<hr>
+<br>
+
+
+<p>
+Our hand picked, home grown collection of beautiful boucettes will 
+dazil and astound the lot of you. We look forward to seeing the pleasant smiles and guarentee satisfaction
+or your money back
+
+</p>
+</div>
+
+<div class = "box">
+Some random shit
+<br>
+<br>
+<hr>
+<br>
+<p>
+Our hand picked, home grown collection of beautiful boucettes will 
+dazil and astound the lot of you. We look forward to seeing the pleasant smiles and guarentee satisfaction
+or your money back
+
+</p>
+
+
+
+</div>
+
+
+</div>
+
+
+<div id = "navbar"> 
+<div class = "inner">
+<ul>
+<nav>
+  <li><a href="#home" class = "home1" >Home</a></li>
+  <li><a href="#about" class = "about1">About</a></li>
+  <li><a href="#services" class = "Services1">Services</a></li>
+
+</nav>
+</ul> 
+<div>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div> 
+</div>
+
+</div>
+
+<div class = "services">
+<div id = "content3">
+
+<div class = "logobox3">
+ <h1 class = "color"> Serving You! </h1>
+ <p class = "small"> A better pot<br></p>
+ <br>
+ <br>
+ <br>
+<div class = "box2">
+Boquet delivery  
+<br>
+<br>
+<hr>
+<br>
+<p>Within 3 business days we guarentee safe, quick delivery. If there are any sort of mishaps with our product
+contact us, we will compensate you with fresh newly picked flowers!</p>
+
+
+</div>
+
+<div class = "box2">
+In store sales
+<br>
+<br>
+<hr>
+<br>
+
+
+<p>
+Our hand picked, home grown collection of beautiful boucettes will 
+dazil and astound the lot of you. We look forward to seeing the pleasant smiles and guarentee satisfaction
+or your money back
+
+</p>
+</div>
+
+<div class = "box2">
+Seed Sales
+<br>
+<br>
+<hr>
+<br>
+<p>
+Our hand picked, home grown collection of beautiful boucettes will 
+dazil and astound the lot of you. We look forward to seeing the pleasant smiles and guarentee satisfaction
+or your money back
+
+</p>
+
+
+
+</div>
+
+
+</div>
+
+
+<div id = "navbar"> 
+<div class = "inner">
+<ul>
+<nav>
+  <li><a href="#home" class = "home1" >Home</a></li>
+  <li><a href="#about" class = "about1">About</a></li>
+  <li><a href="#services" class = "Services1">Services</a></li>
+
+</nav>
+</ul> 
+<div>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div> 
+</div>
+
+</div>
+
+
+
+
+
+</body>
+
+
+
+</html>
